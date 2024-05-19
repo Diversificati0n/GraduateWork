@@ -1,0 +1,198 @@
+@import 'variables';
+
+/* Header */
+#header {
+  position: relative;
+  background: $color-background;
+  text-align: center;
+
+  .container {
+    padding: $padding-header;
+  }
+
+  .Logohome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+
+  h1 {
+    font-family: $font-family;
+    font-weight: $font-weight-bold;
+    color: $color-main;
+    text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+    font-size: 3em;
+    letter-spacing: 13px;
+    margin: 0;
+
+    a {
+      border: 0;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    color: $color-secondary;
+    margin: 2.5em 0 0 0;
+    font-size: 1.2em;
+    letter-spacing: $letter-spacing-base;
+    text-align: center;
+  }
+}
+
+/* Nav */
+#nav {
+  top: 3em;
+  left: 0;
+  width: 100%;
+  cursor: default;
+  padding-bottom: 30px;
+
+  ul > li {
+    display: inline-block;
+    padding-right: 2em;
+    position: relative;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  ul > li > a {
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    color: $color-gray;
+    outline: 0;
+    display: block;
+    font-size: 1.2em;
+
+    // &:before {
+    //   display: inline-block;
+    //   background: $color-link;
+    //   color: $color-white;
+    //   width: 1.65em;
+    //   height: 1.65em;
+    //   border-radius: 50%;
+    //   line-height: 1.65em;
+    //   text-align: center;
+    //   box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+    //   margin-right: 0.75em;
+    //   transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    // }
+
+    // > span {
+    //   transition: color 0.25s ease-in-out;
+    //   font-size: 0.85em;
+    //   letter-spacing: $letter-spacing-base;
+    // }
+  }
+
+  // ul > li > ul {
+  //   display: none;
+  //   position: absolute;
+  //   top: 100%;
+  //   left: 0;
+  //   min-width: 10em;
+  //   padding: 0.5em 0;
+  //   border: 1px solid $color-border;
+  //   background: $color-background;
+  //   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  //   z-index: 999;
+  // }
+
+  // ul > li:hover > ul {
+  //   display: block;
+  // }
+
+  ul > li > ul > li {
+    display: block;
+
+    // > a {
+    //   display: block;
+    //   padding: 0.5em 1em;
+    //   color: $color-text;
+    //   text-decoration: none;
+    //   transition: color 0.3s ease;
+
+    //   &:hover {
+    //     color: $color-main;
+    //   }
+    // }
+  }
+}
+
+
+.dropotron {
+  text-align: left;
+  border: solid 1px $color-border;
+  border-radius: 4px;
+  background: $color-background;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  padding: 0.75em 0 0.5em 0;
+  min-width: 12em;
+  margin-top: calc(-0.5em + 1px);
+  margin-left: -2px;
+  list-style: none;
+
+  &.level-0 {
+    // margin-top: 1.5em;
+    // margin-left: -1em;
+
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   left: 1.25em;
+    //   top: calc(-0.75em + 1px);
+    //   border-left: solid 0.75em rgba(255, 255, 255, 0);
+    //   border-right: solid 0.75em rgba(255, 255, 255, 0);
+    //   border-bottom: solid 0.75em $color-background;
+    // }
+
+    // &:before {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   left: 1.25em;
+    //   top: -0.75em;
+    //   border-left: solid 0.75em rgba(255, 255, 255, 0);
+    //   border-right: solid 0.75em rgba(255, 255, 255, 0);
+    //   border-bottom: solid 0.75em $color-gray-light;
+    // }
+  }
+
+  // > span,
+  // > a {
+  //   display: block;
+  //   padding: 0.3em 1em 0.3em 1em;
+  //   border: 0;
+  //   border-top: solid 1px $color-border;
+  //   outline: 0;
+  // }
+
+  li {
+    // padding-left: 0;
+    // margin: 0;
+
+    // &:first-child {
+    //   > span,
+    //   > a {
+    //     border-top: 0;
+    //     padding-top: 0;
+    //   }
+    // }
+
+    &:hover {
+      > span,
+      > a {
+        transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+        color: $color-main;
+      }
+    }
+  }
+}

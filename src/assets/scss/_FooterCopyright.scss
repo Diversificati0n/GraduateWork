@@ -1,0 +1,39 @@
+@import 'variables';
+
+/* Footer */
+#footer {
+	position: relative;
+	overflow: hidden;
+	background: $color-gray-light;
+
+	form {
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		select,
+		textarea {
+			background: #f7f7f7;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="password"]:focus,
+		select:focus,
+		textarea:focus {
+			background: $color-background;
+		}
+	}
+
+	h2 {
+		text-align: center;
+		padding-top: 20px;
+	}
+}
+
+/* Copyright */
+#copyright {
+	border-top: solid 2px $color-border;
+	text-align: center;
+	margin-top: 6em;
+	// padding-top: 4em;
+}

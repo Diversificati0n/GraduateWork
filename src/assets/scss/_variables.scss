@@ -1,0 +1,55 @@
+// Fonts
+$font-family: 'Arvo', serif;
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+
+// Colors
+$color-main: #ed786a;
+$color-secondary: #888;
+$color-text: #333;
+$color-gray-light: #e7e5e5;
+$color-gray: #777;
+$color-background: #fff;
+$color-border: #e5e5e5;
+$color-box-shadow: rgba(0, 0, 0, 0.1);
+$color-black: #000;
+$color-white: #fff;
+$color-link: #878787;
+$color-link-hover: #ed786a;
+$color-modal-bg: rgba(0, 0, 0, 0.5);
+$color-error: #dc3545; // Новая переменная
+$color-success: #28a745; // Новая переменная
+
+// Spacing
+$padding-header: 6em 0 4em 0;
+$padding-section: 3em 0 0 0;
+$padding-footer: 2em 0;
+
+// Typography
+$font-size-base: 1em;
+$letter-spacing-base: 3px;
+
+// Breakpoints
+$breakpoint-xlarge: 1600px;
+$breakpoint-large: 1280px;
+$breakpoint-medium: 1024px;
+$breakpoint-small: 768px;
+$breakpoint-phone: 375px;
+// Row
+$gutter-size: 50px; // Adjust as needed
+$max-gutter: 200px; // Adjust as needed
+// Row (for 736px width)
+$gutter-size-small: 30px; // Adjust as needed
+$max-gutter-small: 60px; // Adjust as needed
+// Row (for 980px width)
+$gutter-size-medium: 50px; // Adjust as needed
+$max-gutter-medium: 200px; // Adjust as needed
+// Row (for 1280px width)
+$gutter-size-large: 50px; // Adjust as needed
+$max-gutter-large: 200px; // Adjust as needed
+// Row (for 1680px width)
+$gutter-size-xlarge: 50px; // Adjust as needed
+$max-gutter-xlarge: 200px; // Adjust as needed
+
+// Border radius
+$border-radius: 4px; // Новая переменная

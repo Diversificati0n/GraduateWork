@@ -1,0 +1,91 @@
+@import '../assets/scss/variables';
+
+h1 {
+    text-align: center;
+    color: $color-text;
+    margin-bottom: 20px;
+}
+
+#MortgageСalculator {
+    background: $color-background;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/* Стили для формы и элементов формы */
+#MortgageСalculator form {
+    background-color: $color-background;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px $color-box-shadow;
+    height: 420px;
+}
+
+#MortgageСalculator form label {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-secondary;
+    display: block;
+    margin: 0 0 1em 0;
+}
+
+#MortgageСalculator form input[type="number"],
+#MortgageСalculator form input[type="submit"] {
+    transition: background-color 0.25s ease-in-out;
+    appearance: none;
+    display: block;
+    border: 0;
+    background: $color-gray-light;
+    width: 100%;
+    box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    line-height: 1.25em;
+    padding: 0.75em 1em;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+}
+
+#MortgageСalculator form input[type="submit"]:hover {
+    background: lighten($color-main, 10%);
+}
+
+#MortgageСalculator form input[type="submit"] {
+    background-color: $color-main;
+    color: $color-white;
+    cursor: pointer;
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+}
+
+
+/* Стили для раздела результатов */
+.result {
+    background-color: $color-background;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px $color-box-shadow;
+    margin-top: 20px;
+}
+
+.result h2 {
+    margin-top: 0;
+    color: $color-text;
+    margin-bottom: 20px;
+}
+
+.result p {
+    font-size: 20px;
+    color: $color-gray;
+    margin-bottom: 10px;
+}
+
+.sum {
+    color: $color-main;
+    font-weight: bold;
+
+    &::after {
+        content: "\20BD";
+        margin-left: 5px;
+    }
+}
