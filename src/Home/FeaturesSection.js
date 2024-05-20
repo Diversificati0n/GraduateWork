@@ -1,8 +1,52 @@
-import React from 'react';
+// src/FeaturesSection.js
+
+import React, { useEffect } from 'react';
 import CardComponent from './CardComponent';
 import ImgAssets from '../../src/assets/imgAssets';
 
 function FeaturesSection() {
+    useEffect(() => {
+        const modal = document.getElementById('modal');
+        const cards = document.querySelectorAll('.card');
+        const closeModalButton = document.querySelector('.close');
+
+        const handleCardClick = (event) => {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+            modal.style.display = 'block';
+        };
+
+        const handleCloseModal = () => {
+            modal.style.display = 'none';
+        };
+
+        const handleWindowClick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        cards.forEach(card => {
+            card.addEventListener('click', handleCardClick);
+        });
+
+        if (closeModalButton) {
+            closeModalButton.addEventListener('click', handleCloseModal);
+        }
+
+        window.addEventListener('click', handleWindowClick);
+
+        // Cleanup event listeners on component unmount
+        return () => {
+            cards.forEach(card => {
+                card.removeEventListener('click', handleCardClick);
+            });
+            if (closeModalButton) {
+                closeModalButton.removeEventListener('click', handleCloseModal);
+            }
+            window.removeEventListener('click', handleWindowClick);
+        };
+    }, []);
+
     return (
         <section id="features">
             <div className="container">
