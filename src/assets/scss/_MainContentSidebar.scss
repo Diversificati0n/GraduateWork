@@ -71,8 +71,8 @@
   padding: 0.75em 1em;
   font-size: 16px;
   margin-bottom: 20px;
-  color: $color-text; /* Устанавливаем цвет текста */
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+  color: $color-text; 
+  box-sizing: border-box; 
 }
 
 .modal-content form input[type="text"]:focus,
@@ -90,8 +90,6 @@
 .modal-content form input[type="submit"]:hover {
   background-color: lighten($color-main, 10%);
 }
-
-
 
 
 .close {
@@ -121,7 +119,7 @@
   color: $color-white;
   text-align: center;
   text-transform: uppercase;
-  background: url("../images/banner.jpg");
+  background: url("../images/banner1.jpg");
   background-size: cover;
   padding: 10em 0;
 
@@ -176,16 +174,32 @@
 #content > section,
 #content > article {
   border-top: solid 2px $color-border;
-  margin: 5em 0 0 0;
-  padding: 5em 0 0 0;
+  margin: 3em 0 0 0;
+  padding: 3em 0 0 0;
   margin-bottom: 20px;
 
   &:first-child {
     border-top: 0;
     box-shadow: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
   }
+}
+
+// #content > article {
+//   margin: 3em 0 0 0;
+//   padding: 3em 0 0 0;
+// }
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.AnLogo {
+  position: relative;
 }
 
 /* Contacts */

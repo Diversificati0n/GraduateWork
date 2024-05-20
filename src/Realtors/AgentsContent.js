@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import ImgAssets from '../../src/assets/imgAssets';
+import AgentComponent from './AgentComponent';
 
 const AgentsContent = () => {
     // Состояние для отслеживания видимости контактов
     const [contactsVisible, setContactsVisible] = useState({
         1: false,
-        2: false
+        2: false,
+        3: false
     });
 
     // Функция для изменения состояния видимости контактов
@@ -15,94 +18,45 @@ const AgentsContent = () => {
         }));
     };
 
+    // Данные об агентствах недвижимости
+    const agentsData = [
+        {
+            id: 1,
+            logo: ImgAssets.an1,
+            city: 'Город1',
+            email: 'email1@example.com',
+            phone: '+1-234-567-8901'
+        },
+        {
+            id: 2,
+            logo: ImgAssets.an5,
+            city: 'Город2',
+            email: 'email2@example.com',
+            phone: '+1-234-567-8902'
+        },
+        {
+            id: 3,
+            logo: ImgAssets.an3,
+            city: 'Город3',
+            email: 'email3@example.com',
+            phone: '+1-234-567-8903'
+        }
+    ];
+
     return (
         <div id="content" className="col-8 col-12-medium">
-
-            <article className="box post">
-                <header>
-                    <h2><a href="javascript:void(0)">Название агентства недвижимости 1</a></h2>
-                </header>
-                <div className="logo">
-                    <img src="путь_к_логотипу_агентства_1" alt="Логотип агентства 1" />
-                </div>
-                <p>Город: Город1</p>
-                <p>Описание: Описание агентства недвижимости 1</p>
-                <a href="javascript:void(0)" className="image featured">
-                    <img src="путь_к_изображению_агентства_1" alt="Изображение агентства 1" />
-                </a>
-                <ul className="actions">
-                    <li>
-                        <button
-                            className="button icon fa-file show-contacts show-contacts-button"
-                            onClick={() => toggleContacts(1)} // Изменил индекс на 1 для первой статьи
-                        >
-                            {contactsVisible[1] ? 'Скрыть контакты' : 'Показать контакты'}
-                        </button>
-                    </li>
-                </ul>
-                <div className="contacts" id={`contacts-1`} style={{ display: contactsVisible[1] ? 'block' : 'none' }}>
-                    <p>Электронная почта: email1@example.com</p>
-                    <p>Телефон: +1-234-567-8901</p>
-                </div>
-            </article>
-
-            <article className="box post">
-                <header>
-                    <h2><a href="javascript:void(0)">Название агентства недвижимости 2</a></h2>
-                </header>
-                <div className="logo">
-                    <img src="путь_к_логотипу_агентства_2" alt="Логотип агентства 2" />
-                </div>
-                <p>Город: Город2</p>
-                <p>Описание: Описание агентства недвижимости 2</p>
-                <a href="javascript:void(0)" className="image featured">
-                    <img src="путь_к_изображению_агентства_2" alt="Изображение агентства 2" />
-                </a>
-                <ul className="actions">
-                    <li>
-                        <button
-                            className="button icon fa-file show-contacts show-contacts-button"
-                            onClick={() => toggleContacts(2)} // Изменил индекс на 2 для второй статьи
-                        >
-                            {contactsVisible[2] ? 'Скрыть контакты' : 'Показать контакты'}
-                        </button>
-                    </li>
-                </ul>
-                <div className="contacts" id={`contacts-2`} style={{ display: contactsVisible[2] ? 'block' : 'none' }}>
-                    <p>Электронная почта: email2@example.com</p>
-                    <p>Телефон: +1-234-567-8902</p>
-                </div>
-            </article>
-
-            <article className="box post">
-                <header>
-                    <h2><a href="javascript:void(0)">Название агентства недвижимости 2</a></h2>
-                </header>
-                <div className="logo">
-                    <img src="путь_к_логотипу_агентства_2" alt="Логотип агентства 2" />
-                </div>
-                <p>Город: Город3</p>
-                <p>Описание: Описание агентства недвижимости 3</p>
-                <a href="javascript:void(0)" className="image featured">
-                    <img src="путь_к_изображению_агентства_3" alt="Изображение агентства 3" />
-                </a>
-                <ul className="actions">
-                    <li>
-                        <button
-                            className="button icon fa-file show-contacts show-contacts-button"
-                            onClick={() => toggleContacts(3)} // Изменил индекс на 3 для второй статьи
-                        >
-                            {contactsVisible[3] ? 'Скрыть контакты' : 'Показать контакты'}
-                        </button>
-                    </li>
-                </ul>
-                <div className="contacts" id={`contacts-3`} style={{ display: contactsVisible[3] ? 'block' : 'none' }}>
-                    <p>Электронная почта: email2@example.com</p>
-                    <p>Телефон: +1-234-567-8902</p>
-                </div>
-            </article>
-
-
+            {agentsData.map(agent => (
+                <AgentComponent
+                    key={agent.id}
+                    id={agent.id}
+                    logo={agent.logo}
+                    city={agent.city}
+                    email={agent.email}
+                    phone={agent.phone}
+                    contactsVisible={contactsVisible}
+                    toggleContacts={toggleContacts}
+                />
+            ))}
             {/* Пагинация */}
             <div className="col-4 col-12-medium">
                 <ul id="pagination" className="actions">

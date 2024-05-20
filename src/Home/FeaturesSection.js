@@ -1,4 +1,5 @@
 import React from 'react';
+import CardComponent from './CardComponent';
 import ImgAssets from '../../src/assets/imgAssets';
 
 function FeaturesSection() {
@@ -9,40 +10,21 @@ function FeaturesSection() {
                     <h2>Куда инвестировать в недвижимость в 2024 году?</h2>
                 </header>
                 <div className="row aln-center">
-
-                    <div className="col-4 col-6-medium col-12-small">
-                        {/* карточка 1 */}
-                        <section className="card" data-card="1">
-                            <a href="#" className="image featured"><img src={ImgAssets.pic01} alt="картинка" /></a>
-                            <header>
-                                <h3>Новостройки: лучшие возможности для инвестиций в 2024 году</h3>
-                            </header>
-                            <p>описание Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam eum libero aliquam? Unde fugit impedit dolores nobis sit commodi, fuga, quia voluptate, saepe quasi cumque sint aliquam libero quis.</p>
-                        </section>
-                    </div>
-
-                    <div className="col-4 col-6-medium col-12-small">
-                        {/* карточка 2 */}
-                        <section className="card" data-card="2">
-                            <a href="#" className="image featured"><img src={ImgAssets.pic02} alt="картинка" /></a>
-                            <header>
-                                <h3>Загородные дома: выбор места и тренды инвестирования</h3>
-                            </header>
-                            <p>описание Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam eum libero aliquam? Unde fugit impedit dolores nobis sit commodi, fuga, quia voluptate, saepe quasi cumque sint aliquam libero quis.</p>
-                        </section>
-                    </div>
-
-                    <div className="col-4 col-6-medium col-12-small">
-                        {/* карточка 3 */}
-                        <section className="card" data-card="3">
-                            <a href="#" className="image featured"><img src={ImgAssets.pic03} alt="картинка" /></a>
-                            <header>
-                                <h3>Коммерческая недвижимость: ключевые секторы</h3>
-                            </header>
-                            <p>описание Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam eum libero aliquam? Unde fugit impedit dolores nobis sit commodi, fuga, quia voluptate, saepe quasi cumque sint aliquam libero quis.</p>
-                        </section>
-                    </div>
-
+                    <CardComponent
+                        image={ImgAssets.pic01}
+                        title="Новостройки: лучшие возможности для инвестиций в 2024 году"
+                        description="Современные квартиры в новостройках обладают высокой ликвидностью и ростом цен, что делает их привлекательным активом. Новостройки предлагают выгодные условия оплаты и разнообразные планировки, позволяя выбрать оптимальный вариант для аренды или перепродажи."
+                    />
+                    <CardComponent
+                        image={ImgAssets.pic02}
+                        title="Загородные дома: выбор места и тренды инвестирования"
+                        description="Загородные дома предлагают уникальную возможность инвестировать в недвижимость с высокими перспективами роста. Эти дома не только предоставляют уединение и близость к природе, но и становятся все более востребованными, что делает их выгодным вложением."
+                    />
+                    <CardComponent
+                        image={ImgAssets.pic03}
+                        title="Коммерческая недвижимость: ключевые секторы"
+                        description="Инвестирование в офисные здания, торговые центры или склады обеспечивает стабильный денежный поток от аренды и долгосрочную прибыль. Выбирайте коммерческую недвижимость для диверсификации портфеля и максимизации доходов."
+                    />
                 </div>
             </div>
         </section>

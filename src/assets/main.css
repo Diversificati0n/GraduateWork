@@ -4,6 +4,7 @@
 @import './css/row980.css';
 @import './css/row1280.css';
 @import './css/row1680.css';
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   line-height: 1;
-  font-family: "Arvo", serif;
+  font-family: "Merriweather", serif;
   color: #333;
   background-color: #fff;
 }
@@ -97,7 +98,7 @@ body.is-preload *:after {
 }
 
 body, input, textarea, select {
-  font-family: "Source Sans Pro", "Arvo", serif;
+  font-family: "Source Sans Pro", "Merriweather", serif;
   font-weight: 300;
   color: #777;
   line-height: 1.65em;
@@ -187,7 +188,6 @@ blockquote {
 
 p {
   text-align: justify;
-  margin-bottom: 2em;
 }
 
 ul, ol, dl, table, blockquote {
@@ -281,7 +281,7 @@ article:last-child {
   width: auto;
 }
 
-.box {
+.box1 {
   padding-bottom: 50px;
 }
 
@@ -332,7 +332,6 @@ ul.links li:first-child {
 }
 
 ul.actions {
-  margin-top: 2.5em;
   clear: both;
   list-style: none;
   padding-left: 0;
@@ -440,7 +439,6 @@ button,
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  position: relative;
   display: inline-block;
   background: #ed786a;
   color: #fff !important;
@@ -463,7 +461,6 @@ input[type=submit].icon:before,
 input[type=reset].icon:before,
 button.icon:before,
 .button.icon:before {
-  position: relative;
   padding-right: 0.75em;
   opacity: 0.5;
   top: 0.05em;
@@ -543,7 +540,7 @@ button.alt:active,
 }
 
 .show-contacts-button {
-  font-family: "Arvo", serif;
+  font-family: "Merriweather", serif;
   font-weight: 700;
   text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
   font-size: 1em; /* Измените размер шрифта по вашему усмотрению */
@@ -557,7 +554,7 @@ button.alt:active,
   text-align: center;
 }
 #header .container {
-  padding: 6em 0 4em 0;
+  padding: 4em 0 4em 0;
 }
 #header .Logohome {
   display: flex;
@@ -566,7 +563,7 @@ button.alt:active,
   gap: 30px;
 }
 #header h1 {
-  font-family: "Arvo", serif;
+  font-family: "Merriweather", serif;
   font-weight: 700;
   color: #ed786a;
   text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
@@ -708,8 +705,8 @@ button.alt:active,
   padding: 0.75em 1em;
   font-size: 16px;
   margin-bottom: 20px;
-  color: #333; /* Устанавливаем цвет текста */
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+  color: #333;
+  box-sizing: border-box;
 }
 
 .modal-content form input[type=text]:focus,
@@ -753,7 +750,7 @@ button.alt:active,
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  background: url("../images/banner.jpg");
+  background: url("../images/banner1.jpg");
   background-size: cover;
   padding: 10em 0;
 }
@@ -801,8 +798,8 @@ button.alt:active,
 #content > section,
 #content > article {
   border-top: solid 2px #e5e5e5;
-  margin: 5em 0 0 0;
-  padding: 5em 0 0 0;
+  margin: 3em 0 0 0;
+  padding: 3em 0 0 0;
   margin-bottom: 20px;
 }
 #content > section:first-child,
@@ -810,7 +807,18 @@ button.alt:active,
   border-top: 0;
   box-shadow: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.AnLogo {
+  position: relative;
 }
 
 /* Contacts */
@@ -1469,5 +1477,9 @@ h1 {
     padding-left: 0;
     margin-left: 0;
     border-left: 0;
+  }
+  .logo {
+    display: flex;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=main.css.map */
