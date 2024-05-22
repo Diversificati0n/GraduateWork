@@ -45,10 +45,20 @@ function loadSubscriptions() {
     return JSON.parse(data);
 }
 
+function isEmailExists(email) {
+    const subscriptions = loadSubscriptions();
+    return subscriptions.includes(email);
+}
+
 function saveSubscription(email) {
+    if (isEmailExists(email)) {
+        return false;
+    }
+
     const subscriptions = loadSubscriptions();
     subscriptions.push(email);
     fs.writeFileSync(subscriptionsFilePath, JSON.stringify(subscriptions, null, 2));
+    return true;
 }
 
 function loadContactForms() {
@@ -78,8 +88,16 @@ app.post('/api/subscribe', (req, res) => {
     if (!email || typeof email !== 'string' || !email.includes('@')) {
         return res.status(400).json({ error: 'Некорректный email' });
     }
-    saveSubscription(email);
-    res.json({ message: 'Email добавлен в базу данных подписок' });
+
+    if (isEmailExists(email)) {
+        return res.status(400).json({ error: 'Email уже был добавлен ранее' });
+    }
+
+    if (saveSubscription(email)) {
+        return res.json({ message: 'Подписка оформлена' });
+    } else {
+        return res.status(500).json({ error: 'Ошибка при добавлении email в базу данных' });
+    }
 });
 
 

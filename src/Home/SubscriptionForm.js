@@ -8,10 +8,8 @@ function SubscriptionForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         try {
             setSubmitting(true);
-
             const response = await fetch('http://localhost:5000/api/subscribe', {
                 method: 'POST',
                 headers: {
@@ -19,31 +17,26 @@ function SubscriptionForm() {
                 },
                 body: JSON.stringify({ email }),
             });
-
+            const data = await response.json();
             if (!response.ok) {
-                throw new Error('Ошибка при добавлении email');
+                throw new Error(data.error || 'Ошибка при добавлении email');
             }
-
-            setSuccessMessage('Подписка оформлена!');
+            setSuccessMessage(data.message);
             setEmail('');
             setErrorMessage('');
-
             setTimeout(() => {
                 setSuccessMessage('');
             }, 5000);
-
         } catch (error) {
             console.error('Ошибка:', error);
-            setErrorMessage('Произошла ошибка при добавлении email');
+            setErrorMessage(error.message || 'Произошла ошибка при добавлении email');
         } finally {
             setSubmitting(false);
         }
     };
-
     const handleChange = (event) => {
         setEmail(event.target.value);
     };
-
     return (
         <article className="box1 excerpt">
             <div className="subscription-form">
