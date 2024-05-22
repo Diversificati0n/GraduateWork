@@ -2,12 +2,12 @@
 на местных жителей, которые хотят быть в курсе текущих событий и получить
 полезные советы по недвижимости.-->
 
-npm start 
+<!-- старт -  npm start 
 
-# запускать из папки backend
-node server.js
+сервер запускать из папки backend - node server.js
 
-# команда для отправки рассылок
+команда для отправки рассылок
+
 curl - X POST http://localhost:5000/api/send-emails \
 -H "Content-Type: application/json" \
 --data - binary @- << EOF
@@ -17,7 +17,7 @@ curl - X POST http://localhost:5000/api/send-emails \
 }
 EOF
 
-# адрес для рассылок вписан в серверную часть  
+адрес для рассылок вписан в серверную часть  
 user: 'testserversite159@gmail.com',
-pass: 'gitm jhis mbgr thnj ', 
+pass: 'gitm jhis mbgr thnj ',  -->
 
