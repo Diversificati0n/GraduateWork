@@ -1,16 +1,29 @@
-// src/backend/server.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const port = 5000;
 
 app.use(bodyParser.json());
 app.use(cors()); // Разрешение CORS
+
+// Настройки транспортера nodemailer
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'testserversite159@gmail.com',
+        pass: 'gitm jhis mbgr thnj ',
+        secure: true,
+        requireTLS: true,
+        tls: {
+            rejectUnauthorized: false
+        }
+    }
+});
 
 const subscriptionsFilePath = path.join(__dirname, 'subscription.json');
 const contactFormFilePath = path.join(__dirname, 'contactForm.json');
@@ -102,6 +115,37 @@ app.post('/api/contact-modal', (req, res) => {
     saveCallRequest(requestData);
 
     res.json({ message: 'Данные запроса на звонок успешно сохранены' });
+});
+
+// Роут для отправки рассылки на email адреса из подписок
+app.post('/api/send-emails', async (req, res) => {
+    const { subject, message } = req.body;
+
+    try {
+        const subscriptions = loadSubscriptions();
+
+        if (subscriptions.length === 0) {
+            return res.status(400).json({ error: 'Нет подписчиков для отправки рассылки' });
+        }
+
+        const mailOptions = {
+            from: 'your-email@gmail.com',
+            to: subscriptions, // передаем массив адресов
+            subject: subject || 'Рассылка',
+            html: `<p>${message || 'Привет, это тестовое сообщение для рассылки.'}</p>`,
+            text: message || 'Привет, это тестовое сообщение для рассылки.', // текстовая версия сообщения
+            encoding: 'UTF-8' // установка кодировки
+        };
+
+        await transporter.sendMail(mailOptions);
+        res.json({ message: 'Рассылка успешно отправлена' });
+    } catch (error) {
+        console.error('Ошибка отправки рассылки:', error);
+        res.status(500).json({ error: 'Произошла ошибка при отправке рассылки' });
+    }
+
+
+
 });
 
 app.listen(port, () => {

@@ -3,10 +3,11 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home/Home';
 import RealEstateNews from './RealEstateNews/RealEstateNews';
-import MortgageCalculator from './MortgageСalculator/Calculator'; // Импортируем компонент MortgageCalculator
+import MortgageCalculator from './MortgageСalculator/Calculator';
 import Realtors from './Realtors/Realtors';
 
-import './assets/main.scss'; // Импорт вашего файла main.scss
+import './assets/main.scss';
+
 
 function App() {
   return (

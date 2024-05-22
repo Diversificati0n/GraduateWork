@@ -285,6 +285,10 @@ article:last-child {
   padding-bottom: 50px;
 }
 
+.textContac {
+  padding-bottom: 20px;
+}
+
 ul {
   list-style: disc;
   padding-left: 1em;
