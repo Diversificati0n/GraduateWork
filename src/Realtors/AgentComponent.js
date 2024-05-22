@@ -1,7 +1,7 @@
 import React from 'react';
 import ImgAssets from '../../src/assets/imgAssets';
 
-const AgentComponent = ({ id, logo, city, email, phone, contactsVisible, toggleContacts }) => {
+const AgentComponent = ({ id, logo, description, email, phone, contactsVisible, toggleContacts }) => {
     return (
         <article className="box post">
             <header>
@@ -9,7 +9,7 @@ const AgentComponent = ({ id, logo, city, email, phone, contactsVisible, toggleC
             </header>
             <div className="logo">
                 <img className='AnLogo' src={logo} alt={`Логотип агентства ${id}`} />
-                <p>Агентство недвижимости предоставляет полный спектр услуг по покупке, продаже и аренде недвижимости. Мы специализируемся на поиске и предложении квартир, домов, коммерческой и загородной недвижимости, а также предлагаем консультации по инвестициям в недвижимость. Наша команда профессионалов готова помочь вам найти идеальное жилье или коммерческий объект, соответствующий вашим потребностям и бюджету.<p>Город: {city}</p></p>
+                <p>{description}</p>
             </div>
             <ul className="actions">
                 <li>

@@ -1,4 +1,3 @@
-// src/FeaturesSection.js
 
 import React, { useEffect } from 'react';
 import CardComponent from './CardComponent';
@@ -11,31 +10,24 @@ function FeaturesSection() {
         const closeModalButton = document.querySelector('.close');
 
         const handleCardClick = (event) => {
-            event.preventDefault(); // Предотвращаем переход по ссылке
+            event.preventDefault();
             modal.style.display = 'block';
         };
-
         const handleCloseModal = () => {
             modal.style.display = 'none';
         };
-
         const handleWindowClick = (event) => {
             if (event.target === modal) {
                 modal.style.display = 'none';
             }
         };
-
         cards.forEach(card => {
             card.addEventListener('click', handleCardClick);
         });
-
         if (closeModalButton) {
             closeModalButton.addEventListener('click', handleCloseModal);
         }
-
         window.addEventListener('click', handleWindowClick);
-
-        // Cleanup event listeners on component unmount
         return () => {
             cards.forEach(card => {
                 card.removeEventListener('click', handleCardClick);

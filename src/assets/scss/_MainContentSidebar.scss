@@ -1,6 +1,5 @@
 @import 'variables';
 
-/* Features */
 #features {
   position: relative;
   overflow: hidden;
@@ -17,7 +16,6 @@
   margin-top: 1.25em;
 }
 
-/* Modal styles */
 .modal {
   display: none;
   position: fixed;
@@ -38,7 +36,7 @@
   width: 80%;
   max-width: 500px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 10px; /* Закругленные углы */
+  border-radius: 10px;
   height: 380px;
 }
 
@@ -77,20 +75,19 @@
 
 .modal-content form input[type="text"]:focus,
 .modal-content form input[type="tel"]:focus {
-  color: $color-text; /* Цвет текста остается темным при фокусе */
+  color: $color-text;
 }
 
 .modal-content form input[type="submit"] {
   background-color: $color-main;
   color: $color-white;
   cursor: pointer;
-  margin-bottom: 0; /* Убираем нижний отступ */
+  margin-bottom: 0;
 }
 
 .modal-content form input[type="submit"]:hover {
   background-color: lighten($color-main, 10%);
 }
-
 
 .close {
   color: $color-gray;
@@ -106,12 +103,12 @@
   }
 }
 
-/* Card styles */
+
 .card {
   cursor: pointer;
 }
 
-/* Banner */
+
 #banner {
   position: relative;
   overflow: hidden;
@@ -162,7 +159,6 @@
   }
 }
 
-/* Main */
 #main {
   position: relative;
   overflow: hidden;
@@ -170,7 +166,6 @@
   padding: $padding-section;
 }
 
-/* Content */
 #content > section,
 #content > article {
   border-top: solid 2px $color-border;
@@ -186,11 +181,6 @@
   }
 }
 
-// #content > article {
-//   margin: 3em 0 0 0;
-//   padding: 3em 0 0 0;
-// }
-
 .logo {
     display: flex;
     align-items: flex-start;
@@ -202,7 +192,6 @@
   position: relative;
 }
 
-/* Contacts */
 .contacts {
   margin-top: 10px;
   padding: 10px 0;
@@ -214,7 +203,6 @@
   }
 }
 
-/* Sidebar */
 #sidebar > section,
 #sidebar > article {
   margin: 5em 0 0 0;
@@ -228,7 +216,6 @@
   }
 }
 
-/* Gift of Life */
 .gift-of-life {
   line-height: 1.5;
 
@@ -241,7 +228,6 @@
   }
 }
 
-/* Price Statistics */
 .price-statistics {
   line-height: 1;
   border: 2px solid $color-border;

@@ -14,11 +14,12 @@ import pic55 from './images/pic55.jpg';
 import pic66 from './images/pic66.jpg';
 import an1 from './images/an1.png';
 import an3 from './images/an3.avif';
-import an4 from './images/an4.jpg';
 import an5 from './images/an5.png';
 import an6 from './images/an6.png';
 import pz from './images/pz.png';
-
+import an7 from './images/an7.jpg';
+import an8 from './images/an8.png';
+import an9 from './images/an9.gif';
 
 const ImgAssets = {
     pic01,
@@ -34,10 +35,12 @@ const ImgAssets = {
     pic66,
     an1,
     an3,
-    an4,
     an5,
     an6,
     pz,
+    an7,
+    an8,
+    an9,
 };
 
 export default ImgAssets;

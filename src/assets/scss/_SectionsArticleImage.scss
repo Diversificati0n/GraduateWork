@@ -1,6 +1,5 @@
 @import 'variables';
 
-/* Основная часть */
 html {
     box-sizing: border-box;
 }
@@ -125,7 +124,6 @@ blockquote {
 
 p {
     text-align: justify;
-    // margin-bottom: 2em;
 }
 
 ul, ol, dl, table, blockquote {
@@ -136,7 +134,7 @@ br.clear {
     clear: both;
 }
 
-/* Container */
+
 .container {
     margin: 0 auto;
     max-width: 100%;
@@ -167,7 +165,7 @@ br.clear {
     }
 }
 
-/* Sections/Article */
+
 section, article {
     margin-bottom: 3em;
 }
@@ -179,7 +177,7 @@ article:last-child {
     margin-bottom: 0;
 }
 
-/* Image */
+
 .image {
     -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
@@ -226,10 +224,6 @@ article:last-child {
     width: auto;
 }
 
-.box1 {
-	padding-bottom: 50px;
-	}
-
 .textContac {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }

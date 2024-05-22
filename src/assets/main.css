@@ -75,7 +75,6 @@ input, select, textarea {
   background-color: #f2a198;
 }
 
-/* Основная часть */
 html {
   box-sizing: border-box;
 }
@@ -198,7 +197,6 @@ br.clear {
   clear: both;
 }
 
-/* Container */
 .container {
   margin: 0 auto;
   max-width: 100%;
@@ -225,7 +223,6 @@ br.clear {
     width: calc(100% - 40px);
   }
 }
-/* Sections/Article */
 section, article {
   margin-bottom: 3em;
 }
@@ -237,7 +234,6 @@ article:last-child {
   margin-bottom: 0;
 }
 
-/* Image */
 .image {
   transition: opacity 0.25s ease-in-out;
   display: inline-block;
@@ -281,12 +277,8 @@ article:last-child {
   width: auto;
 }
 
-.box1 {
-  padding-bottom: 50px;
-}
-
 .textContac {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 ul {
@@ -457,7 +449,7 @@ button,
   font-size: 0.85em;
   letter-spacing: 2px;
   padding: 0.85em 2.75em;
-  float: left;
+  font-family: "Merriweather", serif;
 }
 
 input[type=button].icon:before,
@@ -547,11 +539,15 @@ button.alt:active,
   font-family: "Merriweather", serif;
   font-weight: 700;
   text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
-  font-size: 1em; /* Измените размер шрифта по вашему усмотрению */
+  font-size: 1em;
   letter-spacing: 1px;
 }
 
-/* Header */
+.success-message {
+  color: #777;
+  padding-top: 10px;
+}
+
 #header {
   position: relative;
   background: #fff;
@@ -588,7 +584,6 @@ button.alt:active,
   text-align: center;
 }
 
-/* Nav */
 #nav {
   top: 3em;
   left: 0;
@@ -636,7 +631,6 @@ button.alt:active,
   color: #ed786a;
 }
 
-/* Features */
 #features {
   position: relative;
   overflow: hidden;
@@ -653,7 +647,6 @@ button.alt:active,
   margin-top: 1.25em;
 }
 
-/* Modal styles */
 .modal {
   display: none;
   position: fixed;
@@ -674,7 +667,7 @@ button.alt:active,
   width: 80%;
   max-width: 500px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 10px; /* Закругленные углы */
+  border-radius: 10px;
   height: 380px;
 }
 
@@ -715,14 +708,14 @@ button.alt:active,
 
 .modal-content form input[type=text]:focus,
 .modal-content form input[type=tel]:focus {
-  color: #333; /* Цвет текста остается темным при фокусе */
+  color: #333;
 }
 
 .modal-content form input[type=submit] {
   background-color: #ed786a;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 0; /* Убираем нижний отступ */
+  margin-bottom: 0;
 }
 
 .modal-content form input[type=submit]:hover {
@@ -741,12 +734,10 @@ button.alt:active,
   cursor: pointer;
 }
 
-/* Card styles */
 .card {
   cursor: pointer;
 }
 
-/* Banner */
 #banner {
   position: relative;
   overflow: hidden;
@@ -790,7 +781,6 @@ button.alt:active,
   right: 0;
 }
 
-/* Main */
 #main {
   position: relative;
   overflow: hidden;
@@ -798,7 +788,6 @@ button.alt:active,
   padding: 3em 0 0 0;
 }
 
-/* Content */
 #content > section,
 #content > article {
   border-top: solid 2px #e5e5e5;
@@ -825,7 +814,6 @@ button.alt:active,
   position: relative;
 }
 
-/* Contacts */
 .contacts {
   margin-top: 10px;
   padding: 10px 0;
@@ -836,7 +824,6 @@ button.alt:active,
   margin: 5px 0;
 }
 
-/* Sidebar */
 #sidebar > section,
 #sidebar > article {
   margin: 5em 0 0 0;
@@ -850,7 +837,6 @@ button.alt:active,
   padding: 0;
 }
 
-/* Gift of Life */
 .gift-of-life {
   line-height: 1.5;
 }
@@ -861,7 +847,6 @@ button.alt:active,
   margin: 0.5em 0;
 }
 
-/* Price Statistics */
 .price-statistics {
   line-height: 1;
   border: 2px solid #e5e5e5;
@@ -881,7 +866,6 @@ button.alt:active,
   margin: 0.7em 0;
 }
 
-/* Footer */
 #footer {
   position: relative;
   overflow: hidden;
@@ -906,7 +890,6 @@ button.alt:active,
   padding-top: 20px;
 }
 
-/* Copyright */
 #copyright {
   border-top: solid 2px #e5e5e5;
   text-align: center;
@@ -925,7 +908,6 @@ h1 {
   padding-bottom: 40px;
 }
 
-/* Стили для формы и элементов формы */
 #MortgageСalculator form {
   background-color: #fff;
   border-radius: 10px;
@@ -958,7 +940,7 @@ h1 {
   padding: 0.75em 1em;
   font-size: 16px;
   margin-bottom: 20px;
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+  box-sizing: border-box;
 }
 
 #MortgageСalculator form input[type=submit]:hover {
@@ -969,10 +951,9 @@ h1 {
   background-color: #ed786a;
   color: #fff;
   cursor: pointer;
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+  box-sizing: border-box;
 }
 
-/* Стили для раздела результатов */
 .result {
   background-color: #fff;
   border-radius: 10px;
@@ -1002,7 +983,6 @@ h1 {
   margin-left: 5px;
 }
 
-/* XLarge */
 @media screen and (max-width: 1600px) {
   body,
   input,
@@ -1011,7 +991,6 @@ h1 {
     font-size: 13pt;
   }
 }
-/* Large */
 @media screen and (max-width: 1280px) {
   body,
   input,
@@ -1026,20 +1005,16 @@ h1 {
   h6 br {
     display: none;
   }
-  /* Image */
   .image.left,
   .image.right {
     max-width: 50%;
   }
-  /* Header */
   #header h1 {
     font-size: 2.5em;
   }
-  /* Features */
   #features {
     padding: 4em 0;
   }
-  /* Banner */
   #banner {
     padding: 8em 0;
   }
@@ -1049,33 +1024,25 @@ h1 {
   #banner > .container br {
     display: none;
   }
-  /* Main */
   #main {
     padding: 4em 0;
   }
-  /* Footer */
   #footer {
     padding: 4em 0;
   }
-  /* Copyright */
   #copyright {
     margin-top: 2em;
     padding-top: 2em;
   }
 }
-/* Medium */
 @media screen and (max-width: 1024px) {
-  /* Basic */
   html,
   body {
     overflow-x: hidden;
   }
-  /* Header */
-  /* Nav */
   #nav {
     display: block;
   }
-  /* Sidebar */
   #sidebar {
     padding-top: 6em;
   }
@@ -1086,7 +1053,6 @@ h1 {
     font-size: 1.75em;
   }
 }
-/* Small */
 @media screen and (max-width: 768px) {
   body,
   input,
@@ -1111,7 +1077,6 @@ h1 {
   h6 br {
     display: none;
   }
-  /* Image */
   .image.featured {
     margin: 0 0 1.5em 0;
   }
@@ -1190,7 +1155,6 @@ h1 {
   .row > .col-6-medium {
     width: 33.3333333333%;
   }
-  /* Actions */
   ul.actions li {
     display: block;
     margin: 1em 0 0 0;
@@ -1199,11 +1163,9 @@ h1 {
     margin-top: 0;
     padding-bottom: 50px;
   }
-  /* Box */
   .box.excerpt header {
     text-align: center;
   }
-  /* Header */
   #header > .container {
     display: flex;
     flex-direction: column;
@@ -1213,7 +1175,6 @@ h1 {
   #logo {
     margin-bottom: 1em;
   }
-  /* Banner */
   #banner {
     padding: 5em 0;
   }
@@ -1227,24 +1188,20 @@ h1 {
   #banner p {
     font-size: 1.25em;
   }
-  /* Features */
   #features {
     padding: 2em 0;
   }
   #features ul.actions {
     margin-top: 0;
   }
-  /* Main */
   #main {
     padding: 2em 0;
   }
-  /* Content */
   #content > section,
   #content > article {
     margin: 3em 0 0 0;
     padding: 3em 0 0 0;
   }
-  /* Sidebar */
   #sidebar {
     padding-top: 3em;
   }
@@ -1253,14 +1210,12 @@ h1 {
     margin: 3em 0 0 0;
     padding: 3em 0 0 0;
   }
-  /* Footer */
   #footer {
     padding: 2em 0;
   }
   #footer ul.icons {
     margin-bottom: 0;
   }
-  /* Copyright */
   #copyright .links {
     margin-bottom: 0;
   }
@@ -1271,8 +1226,7 @@ h1 {
     border-left: 0;
   }
 }
-/* Phone */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   body,
   input,
   textarea,
@@ -1296,7 +1250,6 @@ h1 {
   h6 br {
     display: none;
   }
-  /* Image */
   .image.featured {
     margin: 0 0 1.5em 0;
   }
@@ -1372,7 +1325,6 @@ h1 {
   .button.alt:active {
     background: #878787;
   }
-  /* Actions */
   ul.actions li {
     display: block;
     margin: 1em 0 0 0;
@@ -1381,11 +1333,9 @@ h1 {
     margin-top: 0;
     padding-bottom: 50px;
   }
-  /* Box */
   .box.excerpt header {
     text-align: center;
   }
-  /* Header */
   #header > .container {
     display: flex;
     flex-direction: column;
@@ -1407,7 +1357,6 @@ h1 {
   #header p {
     margin: 0;
   }
-  /* Banner */
   #banner {
     padding: 5em 0;
   }
@@ -1421,7 +1370,6 @@ h1 {
   #banner p {
     font-size: 1.25em;
   }
-  /* Features */
   #features {
     padding: 2em 0;
   }
@@ -1436,11 +1384,9 @@ h1 {
   .row > .col-12-small {
     width: 100%;
   }
-  /* Main */
   #main {
     padding: 2em 0;
   }
-  /* Content */
   #content > section,
   #content > article {
     margin: 3em 0 0 0;
@@ -1456,7 +1402,6 @@ h1 {
   .box {
     padding-bottom: 0px;
   }
-  /* Sidebar */
   #sidebar {
     padding-top: 3em;
   }
@@ -1465,14 +1410,12 @@ h1 {
     margin: 3em 0 0 0;
     padding: 3em 0 0 0;
   }
-  /* Footer */
   #footer {
     padding: 2em 0;
   }
   #footer ul.icons {
     margin-bottom: 0;
   }
-  /* Copyright */
   #copyright .links {
     margin-bottom: 0;
   }

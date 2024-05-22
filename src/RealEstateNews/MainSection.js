@@ -9,7 +9,7 @@ function MainSection() {
             <div className="container">
                 <div className="row">
 
-                    {/* Content */}
+                    {/* Контент */}
                     <News />
 
                     {/* Сайдбар */}

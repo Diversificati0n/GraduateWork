@@ -9,9 +9,8 @@ const app = express();
 const port = 5000;
 
 app.use(bodyParser.json());
-app.use(cors()); // Разрешение CORS
+app.use(cors());
 
-// Настройки транспортера nodemailer
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -74,67 +73,50 @@ function saveCallRequest(requestData) {
     fs.writeFileSync(callRequestFilePath, JSON.stringify(callRequests, null, 2));
 }
 
-// Роут для обработки подписок
 app.post('/api/subscribe', (req, res) => {
     const { email } = req.body;
-
     if (!email || typeof email !== 'string' || !email.includes('@')) {
         return res.status(400).json({ error: 'Некорректный email' });
     }
-
     saveSubscription(email);
-
     res.json({ message: 'Email добавлен в базу данных подписок' });
 });
 
-// Роут для обработки данных из формы
+
 app.post('/api/contact', (req, res) => {
     const { name, email, message } = req.body;
-
     if (!name || !email || !message) {
         return res.status(400).json({ error: 'Не заполнены все обязательные поля' });
     }
-
     const formData = { name, email, message, id: Date.now() };
-
     saveContactForm(formData);
-
     res.json({ message: 'Данные формы успешно сохранены' });
 });
 
-// Роут для обработки данных из модального окна
 app.post('/api/contact-modal', (req, res) => {
     const { name, phone } = req.body;
-
     if (!name || !phone) {
         return res.status(400).json({ error: 'Не заполнены все обязательные поля' });
     }
-
     const requestData = { name, phone, id: Date.now() };
-
     saveCallRequest(requestData);
-
     res.json({ message: 'Данные запроса на звонок успешно сохранены' });
 });
 
-// Роут для отправки рассылки на email адреса из подписок
 app.post('/api/send-emails', async (req, res) => {
     const { subject, message } = req.body;
-
     try {
         const subscriptions = loadSubscriptions();
-
         if (subscriptions.length === 0) {
             return res.status(400).json({ error: 'Нет подписчиков для отправки рассылки' });
         }
-
         const mailOptions = {
             from: 'your-email@gmail.com',
-            to: subscriptions, // передаем массив адресов
+            to: subscriptions,
             subject: subject || 'Рассылка',
             html: `<p>${message || 'Привет, это тестовое сообщение для рассылки.'}</p>`,
-            text: message || 'Привет, это тестовое сообщение для рассылки.', // текстовая версия сообщения
-            encoding: 'UTF-8' // установка кодировки
+            text: message || 'Привет, это тестовое сообщение для рассылки.',
+            encoding: 'UTF-8'
         };
 
         await transporter.sendMail(mailOptions);
@@ -143,9 +125,6 @@ app.post('/api/send-emails', async (req, res) => {
         console.error('Ошибка отправки рассылки:', error);
         res.status(500).json({ error: 'Произошла ошибка при отправке рассылки' });
     }
-
-
-
 });
 
 app.listen(port, () => {

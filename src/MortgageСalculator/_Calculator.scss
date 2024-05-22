@@ -12,8 +12,6 @@ h1 {
     padding-bottom: 40px;
 }
 
-
-/* Стили для формы и элементов формы */
 #MortgageСalculator form {
     background-color: $color-background;
     border-radius: 10px;
@@ -44,7 +42,7 @@ h1 {
     padding: 0.75em 1em;
     font-size: 16px;
     margin-bottom: 20px;
-    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+    box-sizing: border-box;
 }
 
 #MortgageСalculator form input[type="submit"]:hover {
@@ -55,11 +53,9 @@ h1 {
     background-color: $color-main;
     color: $color-white;
     cursor: pointer;
-    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+    box-sizing: border-box;
 }
 
-
-/* Стили для раздела результатов */
 .result {
     background-color: $color-background;
     border-radius: 10px;

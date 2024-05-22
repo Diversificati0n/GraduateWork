@@ -1,12 +1,11 @@
-// src/Home.js
 
 import React from 'react';
-import Header from './Header';
+import Header from '../Header/Header';
 import FeaturesSection from './FeaturesSection';
 import Modal from './Modal';
 import Banner from './Banner';
 import MainSection from './MainSection';
-import Footer from './Footer';
+import Footer from '../Footer/Footer';
 
 function Home() {
     return (

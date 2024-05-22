@@ -46,12 +46,12 @@ const News = () => {
                     description={news.description}
                 />
             ))}
-            {/* Пагинация */}
+            {/* Переход */}
             <div className="col-4 col-12-medium">
                 <ul id="pagination" className="actions">
-                    {/* Кнопка "Назад" */}
+                    {/* назад */}
                     <li><a href="javascript:void(0)" id="prevBtn" className="button icon fa-arrow-left">Назад</a></li>
-                    {/* Кнопка "Далее" */}
+                    {/* далее" */}
                     <li><a href="javascript:void(0)" id="nextBtn" className="button icon fa-arrow-right">Далее</a></li>
                 </ul>
             </div>
